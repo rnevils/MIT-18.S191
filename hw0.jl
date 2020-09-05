@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.11.10
+# v0.11.12
 
 using Markdown
 using InteractiveUtils
@@ -249,14 +249,6 @@ md"""
 # ╔═╡ a60a492a-e7bc-11ea-0f0b-75d81ce46a01
 md"That's it for now, see you next week!"
 
-# ╔═╡ b3c7a050-e855-11ea-3a22-3f514da746a4
-if student.kerberos_id === "jazz"
-	md"""
-!!! danger "Oops!"
-    **Before you submit**, remember to fill in your name and kerberos ID at the top of this notebook!
-	"""
-end
-
 # ╔═╡ d3625d20-e6ce-11ea-394a-53208540d626
 
 
@@ -343,7 +335,6 @@ has area **$(area_sierpinski(n))**
 # ╟─c1ecad86-e7bc-11ea-1201-23ee380181a1
 # ╟─c9bf4288-e6ce-11ea-0e13-a36b5e685998
 # ╟─a60a492a-e7bc-11ea-0f0b-75d81ce46a01
-# ╟─b3c7a050-e855-11ea-3a22-3f514da746a4
 # ╟─d3625d20-e6ce-11ea-394a-53208540d626
-# ╟─dfdeab34-e751-11ea-0f90-2fa9bbdccb1e
-# ╟─b923d394-e750-11ea-1971-595e09ab35b5
+# ╠═dfdeab34-e751-11ea-0f90-2fa9bbdccb1e
+# ╠═b923d394-e750-11ea-1971-595e09ab35b5
