@@ -13,3 +13,8 @@ This repo holds my HW solutions for the MIT's 18.S191 course (Introduction to Co
 
 
 
+### Solutions
+
+The hw files are all meant to be run in a Pluto Notebook. While they are still normal .jl files, if you do not have Pluto installed it will be hard to tell what's going on just by looking at the source code. Luckily, Pluto allows exporting of the notbooks to html pages, so the solutions below are links to a static html page of the pluto notebook. 
+
+- <a href="https://htmlpreview.github.io/?https://github.com/rnevils/MIT-18.S191/blob/master/hw0.jl.html" target="_blank">HW0</a>
