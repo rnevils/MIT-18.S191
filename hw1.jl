@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.11.13
+# v0.11.14
 
 using Markdown
 using InteractiveUtils
@@ -920,10 +920,14 @@ function with_sobel_edge_detect(image)
 	Sx = [1 0 -1; 2 0 -2; 1 0 -1]
 	Sy = [1 2 1; 0 0 0; -1 -2 -1]
 	
+	Gx = convolve_image(image, Sx)
+	Gy = convolve_image(image, Sy)
+	
+
 	
 	
 	
-	return convolve_image(image, Sx)
+	return (Gx.^2 + Gy.^2).^0.5
 end
 
 # ╔═╡ 1b85ee76-ee10-11ea-36d7-978340ef61e6
@@ -1496,7 +1500,7 @@ with_gaussian_blur(gauss_camera_image)
 sobel_camera_image = Gray.(process_raw_camera_data(sobel_raw_camera_data));
 
 # ╔═╡ 1bf94c00-ee19-11ea-0e3c-e12bc68d8e28
-with_sobel_edge_detect(sobel_camera_image)
+with_sobel_edge_detect(sobel_camera_image).^2
 
 # ╔═╡ Cell order:
 # ╠═83eb9ca0-ed68-11ea-0bc5-99a09c68f867
@@ -1692,4 +1696,4 @@ with_sobel_edge_detect(sobel_camera_image)
 # ╟─74d44e22-edee-11ea-09a0-69aa0aba3281
 # ╟─115ded8c-ee0a-11ea-3493-89487315feb7
 # ╟─dfb7c6be-ee0d-11ea-194e-9758857f7b20
-# ╟─e15ad330-ee0d-11ea-25b6-1b1b3f3d7888
+# ╠═e15ad330-ee0d-11ea-25b6-1b1b3f3d7888
