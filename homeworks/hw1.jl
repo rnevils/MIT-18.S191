@@ -916,16 +916,14 @@ For simplicity you can choose one of the "channels" (colours) in the image to ap
 # ╔═╡ 9eeb876c-ee15-11ea-1794-d3ea79f47b75
 function with_sobel_edge_detect(image)
 	
+	image = convert(Array{Gray{Float64},2}, image)
+	
 	# define sobelx and sobely
 	Sx = [1 0 -1; 2 0 -2; 1 0 -1]
 	Sy = [1 2 1; 0 0 0; -1 -2 -1]
 	
 	Gx = convolve_image(image, Sx)
 	Gy = convolve_image(image, Sy)
-	
-
-	
-	
 	
 	return (Gx.^2 + Gy.^2).^0.5
 end
@@ -1500,7 +1498,7 @@ with_gaussian_blur(gauss_camera_image)
 sobel_camera_image = Gray.(process_raw_camera_data(sobel_raw_camera_data));
 
 # ╔═╡ 1bf94c00-ee19-11ea-0e3c-e12bc68d8e28
-with_sobel_edge_detect(sobel_camera_image).^2
+with_sobel_edge_detect(sobel_camera_image)
 
 # ╔═╡ Cell order:
 # ╠═83eb9ca0-ed68-11ea-0bc5-99a09c68f867
